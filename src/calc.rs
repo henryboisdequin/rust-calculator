@@ -51,3 +51,22 @@ impl Calc {
         total
     }
 }
+
+#[test]
+fn test_all_operations() {
+    // addition
+    assert_eq!(Calc::add([2, 4, 6].to_vec()), 12.0);
+    assert_eq!(Calc::add([-6, 5, 10].to_vec()), 9.0);
+
+    // subtraction
+    assert_eq!(Calc::sub([10, 4, 6].to_vec()), 0.0);
+    assert_eq!(Calc::sub([100, 10, 19].to_vec()), 71.0);
+
+    // multiplication
+    assert_eq!(Calc::mul([10, 10, 2].to_vec()), 200.0);
+    assert_eq!(Calc::mul([-3, 2].to_vec()), -6.0);
+
+    // division
+    assert_eq!(Calc::div([54, 2, 3].to_vec()), 9.0);
+    assert_eq!(Calc::div([4, 2, 5].to_vec()), 0.4);
+}
