@@ -33,7 +33,7 @@ fn main() {
                     let mut counter = 0;
 
                     while counter != parts.len() {
-                        let val: i64 = parts[counter].trim().parse().ok().expect("Enter a number.");
+                        let val: f64 = parts[counter].trim().parse().ok().expect("Enter a number.");
                         number_array.push(val);
                         counter += 1;
                     }
